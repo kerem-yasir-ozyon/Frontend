@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+p{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.paragraph{
+    color: black;
+}
+#third{
+    color: blue;
+}
+main>h2{
+    background-color: blueviolet;
+}
+main>ul{
+    background-color: aqua;
+}
+li>a{
+    color: aliceblue;
+    background-color: black;
+}
+section>h2{
+    color: blue;
+}
+section>a{
+    color: aliceblue;
+    background-color: black;
+}
+ol>li{
+    background-color: grey;
+}
+ol>li:nth-child(2n+1){
+    background-color: rgb(223, 72, 97);
+}
+ol::first-line{
+    color: blue;
+}
+ol>li:nth-child(n+4){
+    color: red;
+}
+.last>p{
+    color: red;
+    background-color: blue;
+}
+.last>p:nth-child(3n+2){
+    background-color: white;
+}
