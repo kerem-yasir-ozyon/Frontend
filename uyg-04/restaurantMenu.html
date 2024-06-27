@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    header{
+        background-color: purple;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 50px;
+    }
+    nav i{
+        /* width: 60px;
+        height: 60px; */
+        font-size: 30px;
+        padding: 10px;
+        margin: 0;
+        cursor: pointer;
+    }
+    #logo {
+        display: flex;
+        align-items: center;
+    }
+    #logo p{
+        padding-left: 10px;
+        font-weight: 300;
+        color: aliceblue;
+        cursor: pointer;
+    }
+    #navsag {
+        display: flex;
+    }
+    #navsag p{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: 300;
+        color: aliceblue;
+        cursor: pointer;
+    }
+    #navsag p:hover{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    .cards{
+        margin: 30px 80px 30px 80px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .card{
+        border: 3px solid aliceblue;
+        border-radius: 8px;
+        background-color: rgb(174, 103, 241);
+        width: 200px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .card:hover{
+        border: 3px solid rgb(3, 3, 3);
+        border-radius: 8px;
+        background-color: rgb(120, 103, 135);
+        width: 200px;
+        margin-right: 20px;
+    }
+    .foto{
+        padding: 10px;
+    }
+    .foto img{
+        width: 175px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .baslik{
+        padding: 0px 10px 0px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .baslik h3{
+        color: purple;
+    }
+    .baslik p{
+        color: purple;
+        display: flex;
+        align-items: center;
+    }
+    .aciklama{
+        padding: 10px;
+    }
+
+</style>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <div id="icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                
+                <p>My Restaurant</p>
+            </div>
+            <div id="navsag">
+                <p>Home</p>
+                <p>Menu</p>
+                <p>Reservation</p>
+                <p>About Us</p>
+                <p>Contact</p>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://nationaltoday.com/wp-content/uploads/2019/07/national-junk-food-day-300x300.jpg" alt="Burger Menu" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Burger</h3>
+                    <p>255</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://simply-delicious-food.com/wp-content/uploads/2020/08/Bourbon-basted-cheeseburger-2-300x300.jpg" alt="Burger" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Burger</h3>
+                    <p>155</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://www.maricruzavalos.com/wp-content/uploads/2022/03/huaraches-food-recipe-300x300.jpg" alt="Taco" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Taco</h3>
+                    <p>76</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://plantationcateringnewport.com/wp-content/uploads/2018/05/ca4.jpg" alt="Sandwich" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Sandwich</h3>
+                    <p>105</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8flrE3zynR5J3EJU1lyDEDqCtiQkFJCP03w&usqp=CAU" alt="Burger" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Burger</h3>
+                    <p>215</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://www.maricruzavalos.com/wp-content/uploads/2022/03/huaraches-food-recipe-300x300.jpg" alt="Taco" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Steak Bowl</h3>
+                    <p>267</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtwA34FJwTEMQ-hCu7X9x6QtiyMdRVkPv92Q&usqp=CAU" alt="Pasta" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Pasta</h3>
+                    <p>123</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://assets.dierbergs.com/proddierbergsstorage/media/June-2023-Product-Images-300x300-Loaded-Burger-1.jpg" alt="Meetball" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Meetball</h3>
+                    <p>215</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO5tyHKnWo0NKpmRXZ9LOvRnZAVxFw4NMCDQ&usqp=CAU" alt="Noodle" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Noodle</h3>
+                    <p>204</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="foto">
+                    <img src="https://plantyou.com/wp-content/uploads/2023/01/DSC03694-300x300.jpg" alt="Chickpea" />
+                </div>
+
+                <div class="baslik">
+                    <h3>Chickpea</h3>
+                    <p>198</p>
+                </div>
+
+                <div class="aciklama">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro iure molestiae culpa, nam unde?</p>
+                </div>
+
+            </div>
+   
+        </div>
+    </main>
+</body>
+</html>

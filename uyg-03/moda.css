@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    background-color: rgb(205, 205, 205);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+header h1{
+    text-align: center;
+    padding: 10px;
+    color: grey;
+}
+hr{
+    background-color: aqua;
+}
+nav{
+    background-color: rgb(205, 205, 205);
+    width: 100%;
+    
+}
+nav h3{
+    display: inline-block;
+    margin: 8px 2px 8px 50px;
+    color: grey;
+}
+nav h3:hover{
+    color: rgb(33, 184, 184);
+}
+main{
+    position: relative;
+    margin-top: 90px;
+}
+.cards{
+    display: inline-flex;
+    width: 60%;
+}
+.reklam{
+    height: 500px;
+    width: 560px;
+    display: inline-block;
+    border: 1px solid rgb(18, 123, 123);
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 20px;
+    background-color: rgb(233, 254, 254);
+}
+.reklam>h3{
+    padding-top: 15px;
+    display: block;
+    text-align: center;
+}
+.reklam>p{
+    text-align: center;
+}
+.cards>div{
+    margin: 40px;
+}
+.card{
+    border: 1px solid rgb(179, 179, 179);
+    padding: 20px;
+    margin-top: 10px;
+}
+.card:hover{
+    box-shadow: 6px 6px 12px aqua;
+}
+.card h3{
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+.card h3:hover{
+    font-size: 25px;
+    color: rgb(159, 67, 67);
+    text-decoration: none;
+}
+footer{
+    text-align: center;
+    background-color: grey;
+    padding: 10px;
+}
