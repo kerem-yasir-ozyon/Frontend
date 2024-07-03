@@ -226,29 +226,37 @@ let myArray = ["kerem", "ozyon",25,true,"karpuz","erik","elma","kebap","sulu kö
 // 2- adınızı değiştirin => Cem => Mert. Diziyi konsola yazdırın.
 myArray[0] = "Erdal";
 console.log(myArray);
+
 // 3- dizinin uzunluğunu konsola yazdırın.
 console.log(myArray.length);
+
 // 4- dizinin sonuna bir hayvan ismi ekleyin. yeni uzunluk bilgisini bir değişkene atayın(.length kullanmadan), konsola yazdırın.
 let sonaEklemeUzunlukArray = myArray.push("Aslan");
 console.log(sonaEklemeUzunlukArray); 
+
 // 5- dizinin başına bir hayvan ekleyin. yeni uzunluk bilgisini bir değişkene atayın(.length kullanmadan), konsola yazdırın.
 let basaEklemeUzunlukArray = (myArray.unshift("Kaplan"));
 console.log(basaEklemeUzunlukArray);
+
 // 6- dizinin sonundaki elemanı silin. silinen elemanı bir değişkene atayın, konsola yazdırın.
 let sondanSilmeUzunlukArray = (myArray.pop());
 console.log(sondanSilmeUzunlukArray);
+
 // 7- dizinin ilk elemanını silin. silinen elemanı bir değişkene atayın, konsola yazdırın.
 let ilkSilmeUzunlukArray = (myArray.shift());
 console.log(ilkSilmeUzunlukArray);
+
 // 8- silmiş olduğunuz elemanları ve uzunluk bilgilerini newArray isimli yeni bir dizide toplayın.(sakladığınız değişkenleri kullanın)
 let newArray = [sonaEklemeUzunlukArray,basaEklemeUzunlukArray,sondanSilmeUzunlukArray,ilkSilmeUzunlukArray]
 console.log(newArray);
+
 // 9- myArray ve newArray dizilerini birleştirin ve yeni değişkenlere atayın. 2 yöntem.
 let birlestirilenArray = myArray.concat(newArray);
 console.log(birlestirilenArray);
 
 let birlestirilenArray2 = [...myArray,...newArray];
-console.log(birlestirilenArray2);
+console.log(birlestirilenArray2);//bu daha cok kullanlıyor
+
 // 10- myArray içerisinde eleman olarak "Veli" var mı ?
 if (myArray.indexOf("Erdal",0) === -1) {
     console.log("Yoktur.");
@@ -261,15 +269,32 @@ if (myArray.indexOf("patates",3) === -1) {
 }else{
     console.log("Vardır.");
 }
+
 // 12- sevdiğiniz meyvelerden ilkinin indexi nedir?
 console.log(myArray.indexOf("karpuz"));
+
 // 13- newArray dizisinin ilk 3 elemanını bir değişkene atayın, konsola yazdırın.
 let newArray2 = myArray.slice(0,3);
 console.log(newArray2);
+
 // 14- son oluşturduğunuz 3 elemanlı dizinin 2. elemanını silip yerine 2 farklı eleman ekleyin.
 
+newArray2.splice(1,1,"kavun","uzum");
+console.log(newArray2);
+
 // 15- son diziniz 4 elemanlı olmuş olmalı. Bu dizi üzerinde 1 eleman silin 1 eleman değiştirin ve bir eleman ekleyin ÖRN: [1, 2, 3, 4] => [1, 'x', 4, 'y']
+
+newArray2.splice(3,1);
+console.log(newArray2);
+newArray2.splice(3,1,"Avakado");
+console.log(newArray2);
+newArray2.splice(3,0,"portakal");
+console.log(newArray2);
+
 // 16- son dizinizin elemanlarını aralarına "+" koyarak bir stringe çevirin ve konsola yazdırın.
+
+console.log(newArray2.toString());
+console.log(newArray2.join(" + "));
 
 
 
