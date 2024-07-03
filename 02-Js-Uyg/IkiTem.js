@@ -286,7 +286,7 @@ console.log(newArray2);
 
 newArray2.splice(3,1);
 console.log(newArray2);
-newArray2.splice(3,1,"Avakado");
+newArray2.splice(1,1,"Avakado");
 console.log(newArray2);
 newArray2.splice(3,0,"portakal");
 console.log(newArray2);
