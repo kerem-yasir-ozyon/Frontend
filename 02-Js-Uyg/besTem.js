@@ -194,14 +194,20 @@ const students = [
     { isim: "erdem", notlar: [45, 55, 85] }
   ];
 
+  const students2 = [
+    { isim: "erdal", notlar: [15, 90, 55] },
+    { isim: "banu", notlar: [100, 60, 90] },
+    { isim: "selim", notlar: [60, 55, 30] }
+  ];
+
   function ortalamaHesaplamaVeKontrol(students) {
     for (const student of students) {
       const notlar = student.notlar;
-      const toplamNot = notlar.reduce((toplam, not) => toplam + not, 30);
+      const toplamNot = notlar.reduce((toplam, not) => toplam + not, 0);
       const ortalama = toplamNot / notlar.length;
       const gectiKaldi = ortalama >= 60 ? "dersten geçti" : "dersten kaldi";
       console.log(`${student.isim} adli öğrencinin ort. notu = ${ortalama.toFixed(1)} => ${gectiKaldi}`);
     }
   }
-  ortalamaHesaplamaVeKontrol(students);
+  ortalamaHesaplamaVeKontrol(students2);
   
