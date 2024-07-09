@@ -1,0 +1,31 @@
+nav{
+    background-color: #1A4D2E;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    .brand{
+        font-size: 20px;
+        display: flex;
+        align-items:center ;
+        gap: 20px;
+        img{
+            width: 90px;
+        }
+    }
+    .liste{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        li{
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover{
+                color: #c99b05;
+                text-decoration: underline;
+                text-decoration: scale(1.2);
+            }
+        }
+    }
+}
