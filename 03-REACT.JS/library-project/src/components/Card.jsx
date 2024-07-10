@@ -1,20 +1,21 @@
 import React from 'react'
 import '../assets/style/card.scss'
+import DfBook from '../assets/img/defaultBook.jpg'
 
-const Card = (props) => {
+const Card = ({kitap,kitapSil}) => {
   
   return (
     
             <div className='card'>
-            <button className='delete'>Sil</button>
+            <button onClick={()=>kitapSil(kitap.id)} className='delete'>Sil</button>
             <button className='edit'>Edit</button>
-            <img src={props.kitap.kitapResmi} alt={props.kitap.kitapAdi+"kapak"} />
+            <img src={kitap.kitapResmi?kitap.kitapResmi:DfBook} alt={kitap.kitapAdi+"kapak"} />
             <div className="card-body">
-              <h4>{props.kitap.kitapAdi}</h4>
-              <p>Yazarı: {props.kitap.kitapYazari}</p>
-              <p>Kategori: {props.kitap.kitapKategorisi}</p>
-              <p>Sayfa Sayısı: {props.kitap.kitapSayfaSayisi}</p>
-              <p>Açıklaması: {props.kitap.kitapAciklamasi.substring(0,99)+"..."}</p>
+              <h4>{kitap.kitapAdi}</h4>
+              <p>Yazarı: {kitap.kitapYazari}</p>
+              <p>Kategori: {kitap.kitapKategorisi}</p>
+              <p>Sayfa Sayısı: {kitap.kitapSayfaSayisi}</p>
+              <p>Açıklaması: {kitap.kitapAciklamasi.substring(0,kitap.kitapAciklamasi.substring(0,100).lastIndexOf(" "))+"..."}</p>
             </div>
           </div>
     
