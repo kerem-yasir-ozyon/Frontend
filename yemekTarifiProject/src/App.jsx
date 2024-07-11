@@ -1,7 +1,9 @@
-import React from 'react'
-import Head from './components/Head'
+import { useState } from 'react'
 import Navi from './components/Navi'
+import Head from './components/Head'
 import CardList from './components/CardList'
+import Form from './components/Form'
+
 
 const App = () => {
   const data = [
@@ -10,7 +12,7 @@ const App = () => {
       "id": 1,
       "title": "Spaghetti Carbonara",
       "description": "A classic Italian pasta dish with a creamy egg sauce.",
-      "image": "https://www.sipandfeast.com/wp-content/uploads/2022/09/spaghetti-carbonara-recipe-snippet-300x300.jpg"
+      "image": "https://localibyromeos.com.au/cdn/shop/products/SPAGHETTICARBONARA_300x300.jpg?v=1626624387"
     },
     {
       "id": 2,
@@ -67,14 +69,24 @@ const App = () => {
       "image": "https://adventuresincooking.com/wp-content/uploads/2010/10/Pumpkin-Soup-by-Eva-Kosmas-Flores-300x300.jpg"
     }
 ];
-const [yemekler,setYemekler] = useState(data);
+
+  const [yemekler,setYemekler] = useState(data);
+
+  const yemekEkle = (yeni) =>{
+    setYemekler(prev=>[...prev,yeni]);
+  }
+
+  const yemekSil = (id) =>{
+    setYemekler(prev=>prev.filter(statedenGelen=>stadedenGlene.id !== id));
+  }
+
   return (
     <>
       <Navi/>
       <Head/>
-      <CardList/>
+      <Form yemekEkle={yemekEkle} yemekler={yemekler}/>
+      <CardList yemekler={yemekler} yemekSil={yemekSil}/>
     </>
-    
   )
 }
 

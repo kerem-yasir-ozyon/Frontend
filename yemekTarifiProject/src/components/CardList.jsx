@@ -1,17 +1,16 @@
 import React from 'react'
 import Card from './Card'
 
-const CardList = ({yemek}) => {
-
+const CardList = ({yemekler,yemekSil}) => {
+  
   return (
     <div className='card-list'>
       {
-        data.map(yemek =>
-          <Card yemek={yemek} key={yemek.id}/>
+        yemekler.map(yemek=>
+          <Card yemek={yemek} yemekSil={yemekSil} key={yemek.id}/>
         )
       }
     </div>
-
   )
 }
 

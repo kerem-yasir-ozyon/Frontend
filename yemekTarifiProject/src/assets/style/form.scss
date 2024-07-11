@@ -1,0 +1,23 @@
+form{
+    margin: 30px;
+    .input{
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+        input{
+            width: 500px;
+        }
+    }
+    .inputS{
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+        input{
+            color: white;
+            height: 30px;
+            width: 500px;
+            background-color: rgb(39, 38, 38);
+            cursor: pointer;
+        }
+    }
+}

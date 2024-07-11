@@ -1,0 +1,22 @@
+nav{
+    background-color: rgb(39, 38, 38);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    .navSol{
+        display: flex;
+        align-items: center;
+        h3{
+            cursor: pointer;
+        }
+    }
+    .navSag{
+        display: flex;
+        align-items: center;
+        p{
+            padding: 2px 10px;
+            cursor: pointer;
+        }
+    }
+}

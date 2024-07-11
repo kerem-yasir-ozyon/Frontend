@@ -3,9 +3,12 @@ import '../assets/style/head.scss'
 
 const Head = () => {
   return (
-    <div>
+    <div className="head">
+      <div className="anaBaslik">
         <h2>Welcome to the Recipe Sharing Platform</h2>
-        <p>Find and share the best recipes from around the world</p>
+      </div>
+      <div className="anaBaslik">
+        Find and share the best recipes from around the world!</div>
     </div>
   )
 }
