@@ -1,10 +1,11 @@
 import React from 'react'
 import Card from './Card'
 
-const CardList = ({kitaplar,kitapSil}) => {
+const CardList = ({kitaplar,kitapSil,secilenKategori}) => {
   
   return (
     <>
+        <h3 style={{marginLeft:"20px"}}>{secilenKategori} </h3>
         <div className='card-list'>
           {
             kitaplar.map(kitap=>
