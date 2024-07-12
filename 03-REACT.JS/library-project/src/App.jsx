@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navi from './components/Navi'
 import Forms from './components/Forms'
 import CardList from './components/CardList'
+import axios from 'axios'
 
 const App = () => {
   const companyName = "ASD LIBRARY";
@@ -11,25 +12,36 @@ const App = () => {
   const [kategoriler,setKategoriler] = useState([])
   const [secilenKategori,setSecilenKategori] = useState("Tüm Kitaplar");
 
-  const kitapEkle = (yeni) => {
-    // setKitaplar([...kitaplar,yeni]);
+  const kitapEkle = async(yeni) => {
     setKitaplar(prev=>[...prev,yeni]);
+    const url = "http://localhost:3005/kitaplar";
+    const response = await axios.post(url,yeni);
+    console.log(response);
   }
 
-  const kitapSil = (id) => {
-    // setKitaplar(kitaplar.filter(statedenGelen => statedenGelen.id !== id))
+  const kitapSil = async (id) => {
     setKitaplar(prev=>prev.filter(statedenGelen => statedenGelen.id !== id));
+    const url = `http://localhost:3005/kitaplar/${id}`;
+    const response = await axios.delete(url);
   }
 
   const kitaplariGetir = async () => {
-    const url = "http://localhost:3000/kitaplar"
+    const url = "http://localhost:3005/kitaplar"
     const response = await fetch(url);
     const kitaplar = await response.json();
     setKitaplar(kitaplar);
   }
 
+  const kategorileriGetir = async() =>{
+    const url = "http://localhost:3005/kategoriler"
+    const response = await axios.get(url);
+    const kategoriler = await response.data;
+    setKategoriler(kategoriler);
+  }
+
   useEffect(()=>{
     kitaplariGetir();
+    kategorileriGetir();
   },[])
   // kitaplariGetir();
 
