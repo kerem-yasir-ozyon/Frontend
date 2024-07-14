@@ -1,3 +1,5 @@
+//veriler
+
 export const kitaplık = [
     {
       id: "1",
