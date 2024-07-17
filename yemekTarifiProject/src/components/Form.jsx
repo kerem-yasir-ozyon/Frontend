@@ -31,7 +31,7 @@ const Form = ({yemekEkle,yemekler}) => {
         <input value={description} onChange={e=>setDescription(e.target.value)} type="text" placeholder='Recipe Description' />
       </div>
       <div className="input">
-      <input value={image} onChange={e=>setImage(e.target.value)} type="text" placeholder='Image URL' />
+      <input value={image} onChange={e=>setImage(e.target.value)} type="url" placeholder='Image URL' />
       </div>
       <div className="inputS">
       <input disabled={title===""||description===""||image===""} type="submit" value={"Add Recipe"} />
