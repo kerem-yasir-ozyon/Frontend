@@ -1,13 +1,15 @@
 import React from 'react'
 import Card from './Card'
 
-const CardList = ({yemekler,yemekSil}) => {
+const CardList = ({yemekler,yemekSil,yemekDuzenle}) => {
   
   return (
     <div className='card-list'>
       {
         yemekler.map(yemek=>
-          <Card yemek={yemek} yemekSil={yemekSil} key={yemek.id}/>
+          !yemek.isDeleted &&
+          <Card yemek={yemek} yemekSil={yemekSil} yemekDuzenle={yemekDuzenle} key={yemek.id}/>
+
         )
       }
     </div>

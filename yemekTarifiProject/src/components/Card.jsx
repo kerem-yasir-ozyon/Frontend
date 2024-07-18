@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/style/card.scss'
 
-const Card = ({yemek,yemekSil}) => {
+const Card = ({yemek,yemekSil,yemekDuzenle}) => {
   return (
     <div className='mainCard'>
       <div className='card'>
@@ -17,7 +17,7 @@ const Card = ({yemek,yemekSil}) => {
           <p>{yemek.description}</p>
         </div>
         <div className="btns">
-        <button className='edit'>Güncelle</button>
+        <button onClick={()=>yemekDuzenle(yemek.id)} className='edit'>Güncelle</button>
         <button onClick={()=>yemekSil(yemek.id)} className='delete'>SİL</button>
         </div>
         

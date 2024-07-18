@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../assets/style/form.scss'
 
-const Form = ({yemekEkle,yemekler}) => {
+const Form = ({yemekEkle,yemekler,secilenYemek}) => {
   const [title,setTitle] = useState("");
   const [description,setDescription] = useState("");
   const [image,setImage] = useState("");
@@ -19,9 +19,18 @@ const Form = ({yemekEkle,yemekler}) => {
     setTitle("");
     setDescription("");
     setImage("");
-    
+
     
   }
+
+  useEffect(()=>{
+    if(secilenYemek){
+      setTitle(secilenYemek.title);
+      setDescription(secilenYemek.description);
+      setImage(secilenYemek.image);
+    }
+  },[secilenYemek])
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="input">
@@ -34,7 +43,7 @@ const Form = ({yemekEkle,yemekler}) => {
       <input value={image} onChange={e=>setImage(e.target.value)} type="url" placeholder='Image URL' />
       </div>
       <div className="inputS">
-      <input disabled={title===""||description===""||image===""} type="submit" value={"Add Recipe"} />
+      <input disabled={title===""||description===""||image===""} type="submit" value={secilenYemek?"Güncelle":"Ekle"} />
       </div>
       
     </form>
