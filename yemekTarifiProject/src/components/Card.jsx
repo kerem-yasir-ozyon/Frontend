@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../assets/style/card.scss'
+import DataContext from '../context/DataContext'
 
-const Card = ({yemek,yemekSil,yemekDuzenle}) => {
+const Card = ({yemek}) => {
+  const {yemekSil,yemekDuzenle} = useContext(DataContext);
   return (
     <div className='mainCard'>
       <div className='card'>

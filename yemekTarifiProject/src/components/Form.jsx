@@ -1,39 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import '../assets/style/form.scss'
+import DataContext from '../context/DataContext'
 
-const Form = ({yemekEkle,yemekler,secilenYemek}) => {
-  const [title,setTitle] = useState("");
-  const [category,setCategory] = useState("Select Category");
-  const [description,setDescription] = useState("");
-  const [image,setImage] = useState("");
-
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-    
-    yemekEkle({
-      
-      id: (Number(yemekler[yemekler.length-1].id)+1).toString(),
-      title: title,
-      category: category,
-      description: description,
-      image:image
-    });
-    setTitle("");
-    setCategory("Select Category");
-    setDescription("");
-    setImage("");
-
-    
-  }
-
-  useEffect(()=>{
-    if(secilenYemek){
-      setTitle(secilenYemek.title);
-      setCategory(secilenYemek.category);
-      setDescription(secilenYemek.description);
-      setImage(secilenYemek.image);
-    }
-  },[secilenYemek])
+const Form = () => {
+  const {secilenYemek,
+          title,
+          category,
+          description,
+          image,
+          setTitle,
+          setCategory,
+          setDescription,
+          setImage,
+          handleSubmit
+        } = useContext(DataContext);
 
   return (
     <div className="formDiv">

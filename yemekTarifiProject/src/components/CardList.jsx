@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from './Card'
+import DataContext from '../context/DataContext'
 
-const CardList = ({yemekler,yemekSil,secilenKategori,yemekDuzenle}) => {
+const CardList = () => {
+  const {yemekler,secilenKategori} = useContext(DataContext);
   
   return (
     <>
@@ -12,7 +14,7 @@ const CardList = ({yemekler,yemekSil,secilenKategori,yemekDuzenle}) => {
           (yemek.category === secilenKategori || secilenKategori === "All Food") &&
           (
             !yemek.isDeleted &&
-            <Card yemek={yemek} yemekSil={yemekSil} yemekDuzenle={yemekDuzenle} key={yemek.id}/>
+            <Card yemek={yemek}  key={yemek.id}/>
           )
 
         )

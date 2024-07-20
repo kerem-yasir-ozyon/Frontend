@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import '../assets/style/navi.scss'
+import DataContext from '../context/DataContext'
 
-const Navi = ({kategoriler,setSecilenKategori}) => {
+const Navi = () => {
+  const {kategoriler,setSecilenKategori} = useContext(DataContext);
   return (
     <nav>
         <div className="navSol">
