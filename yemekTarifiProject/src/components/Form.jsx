@@ -3,6 +3,7 @@ import '../assets/style/form.scss'
 
 const Form = ({yemekEkle,yemekler,secilenYemek}) => {
   const [title,setTitle] = useState("");
+  const [category,setCategory] = useState("Select Category");
   const [description,setDescription] = useState("");
   const [image,setImage] = useState("");
 
@@ -13,10 +14,12 @@ const Form = ({yemekEkle,yemekler,secilenYemek}) => {
       
       id: (Number(yemekler[yemekler.length-1].id)+1).toString(),
       title: title,
+      category: category,
       description: description,
       image:image
     });
     setTitle("");
+    setCategory("Select Category");
     setDescription("");
     setImage("");
 
@@ -26,16 +29,26 @@ const Form = ({yemekEkle,yemekler,secilenYemek}) => {
   useEffect(()=>{
     if(secilenYemek){
       setTitle(secilenYemek.title);
+      setCategory(secilenYemek.category);
       setDescription(secilenYemek.description);
       setImage(secilenYemek.image);
     }
   },[secilenYemek])
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="formDiv">
+      <form onSubmit={handleSubmit}>
       <div className="input">
         <input value={title} onChange={e=>setTitle(e.target.value)} type="text" placeholder='RecipeTitle' />
       </div>
+      <div className="categorySelect">
+        <select value={category} onChange={e=>setCategory(e.target.value)}>
+          <option>Select Category</option>
+          <option>Italian Food</option>
+          <option>Turkish Food</option>
+        </select>
+      </div>
+      
       <div className="input">
         <input value={description} onChange={e=>setDescription(e.target.value)} type="text" placeholder='Recipe Description' />
       </div>
@@ -47,6 +60,8 @@ const Form = ({yemekEkle,yemekler,secilenYemek}) => {
       </div>
       
     </form>
+    </div>
+    
   )
 }
 

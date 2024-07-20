@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/style/navi.scss'
 
-const Navi = () => {
+const Navi = ({kategoriler,setSecilenKategori}) => {
   return (
     <nav>
         <div className="navSol">
@@ -10,9 +10,11 @@ const Navi = () => {
             </h3>
         </div>
         <div className="navSag">
-            <p>Home</p>
-            <p>Add Recipe</p>
-            <p>About</p>
+        {
+          kategoriler.map(kategori=>
+              <p onClick={(e)=>setSecilenKategori(e.target.innerText)} key={kategori.kategoriId}>{kategori.kategoriAdi}</p>
+            )
+        }
         </div>
     </nav>
   )
