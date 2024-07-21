@@ -1,15 +1,14 @@
 import React from 'react'
 import Head from './Head'
 import CardList from './CardList'
-import About from './About'
+import Footerr from './Footerr'
 
 const Anasayfa = () => {
   return (
     <div>
         <Head/> 
         <CardList/>
-        <About/>
-
+        <Footerr/>
     </div>
   )
 }

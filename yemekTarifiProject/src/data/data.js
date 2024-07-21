@@ -60,6 +60,41 @@ export const yemekler = [
       description: "A creamy, seasonal soup made with pureed pumpkin and a blend of warm spices.",
       image: "https://adventuresincooking.com/wp-content/uploads/2010/10/Pumpkin-Soup-by-Eva-Kosmas-Flores-300x300.jpg"
     }
+    ,
+    {
+      id: 11,
+      title: "Hamburger",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, debitis iusto veritatis ducimus quia pariatur omnis labore. Velit perspiciatis magnam eveniet accusantium facere.",
+      image: "https://cdn.getiryemek.com/cuisines/1713898221252_1024x1024.jpeg"
+    }
+    ,
+    {
+      id: 12,
+      title: "Adana Kebap",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, debitis iusto veritatis ducimus quia pariatur omnis labore. Velit perspiciatis magnam eveniet accusantium facere.",
+      image: "https://erzenleretsofrasi.com/wp-content/uploads/2020/11/adana.jpg"
+    }
+    ,
+    {
+      id: 13,
+      title: "Iskender",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, debitis iusto veritatis ducimus quia pariatur omnis labore. Velit perspiciatis magnam eveniet accusantium facere.",
+      image: "https://images.deliveryhero.io/image/fd-tr/LH/heni-hero.jpg?width=300&height=300&quality=45"
+    }
+    ,
+    {
+      id: 14,
+      title: "Cig Kofte",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, debitis iusto veritatis ducimus quia pariatur omnis labore. Velit perspiciatis magnam eveniet accusantium facere.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4YKp81d-eSYQMwsEySmUB0sQvMPWjHo58w&s"
+    }
+    ,
+    {
+      id: 14,
+      title: "Cig Kofte",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, debitis iusto veritatis ducimus quia pariatur omnis labore. Velit perspiciatis magnam eveniet accusantium facere.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4YKp81d-eSYQMwsEySmUB0sQvMPWjHo58w&s"
+    }
 ]
 export const kategoriler = [
   {

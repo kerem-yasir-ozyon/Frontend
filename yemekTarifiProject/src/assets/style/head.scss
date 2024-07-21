@@ -4,8 +4,24 @@
         justify-content: center;
         align-items: center;
         h2{
-            padding-top: 10px;
+            padding-top: 40px;
+            font-size: 40px;
         }
         
+    }
+    .ikinciBaslik{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        font-size: 30px;
+
+    }
+    .altBaslik{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 40px 200px;
+        font-size: 20px;
     }
 }

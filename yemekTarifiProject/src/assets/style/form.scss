@@ -1,6 +1,6 @@
 .formDiv{
-    display: flex;
     justify-content: center;
+    margin-top: 200px;
 }
 form{
     background-color: #b8a596;
@@ -9,6 +9,7 @@ form{
     margin: 30px auto;
     border-radius: 15px;
     text-align: center;
+    scale: 1.6;
     color: white;
     .categorySelect{
         display: flex;

@@ -1,0 +1,19 @@
+.login-page{
+    margin-top: 200px;
+    form{
+        input{
+            margin: 10px;
+        }
+        .lgnBtn{
+            margin-bottom: 10px;
+            
+            input{
+                transition: .5s;
+                &:hover{
+                    background-color: brown;
+                }
+            }
+            
+        }
+    }
+}

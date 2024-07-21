@@ -17,7 +17,9 @@ const Form = () => {
 
   return (
     <div className="formDiv">
+      
       <form onSubmit={handleSubmit}>
+      <h1>Food Crud</h1>
       <div className="input">
         <input value={title} onChange={e=>setTitle(e.target.value)} type="text" placeholder='RecipeTitle' />
       </div>

@@ -1,31 +1,47 @@
 nav{
-    background-color: rgb(39, 38, 38);
+    background-color: #1A4D2E;
     color: white;
     display: flex;
     justify-content: space-between;
     padding: 5px 20px;
     .navSol{
+        padding-left: 50px;
         display: flex;
         align-items: center;
-        h3{
-            cursor: pointer;
+        .navH{
+            text-decoration: none;
+            padding: 5px 10px;
+            color: white;
+            font-size: 25px;
         }
     }
     .navSag{
         display: flex;
         align-items: center;
         p{
-            padding: 2px 10px;
+            padding: 5px 20px;
+            font-size: 25px;
             cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+                text-decoration: scale(1.2);
+            }
         }
     }
     .navSagSag{
         display: flex;
         align-items: center;
-        p{
-            padding: 2px 10px;
-            cursor: pointer;
+        justify-content: end;
+        .navP{
+            text-decoration: none;
+            padding: 5px 20px 5px 20px;
+            font-size: 25px;
+            &:hover{
+                text-decoration: underline;
+                text-decoration: scale(1.2);
+            }
         }
+        
     }
 }
 .active{
