@@ -13,6 +13,7 @@ export const DataProvider = ({children})=>{
     const [category,setCategory] = useState("Select Category");
     const [description,setDescription] = useState("");
     const [image,setImage] = useState("");
+    const [search,setSearch] = useState("");
   
     const yemekEkle = async (yeni) => {
       let url = "http://localhost:3007/yemekler";
@@ -111,7 +112,8 @@ export const DataProvider = ({children})=>{
         setImage,
         handleSubmit, //formdan gelenelr
         yemekler,secilenKategori, // CardListten gelenler
-        yemekSil,yemekDuzenle // Carddan gelenler
+        yemekSil,yemekDuzenle, // Carddan gelenler
+        search,setSearch
     }}>
                 {children}
            </DataContext.Provider>

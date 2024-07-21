@@ -1,13 +1,15 @@
 import React, { useContext } from 'react'
 import Card from './Card'
 import DataContext from '../context/DataContext'
+import SearchBar from './SearchBar';
 
 const CardList = () => {
   const {yemekler,secilenKategori} = useContext(DataContext);
   
   return (
     <>
-      <h3 style={{marginLeft:"25px"}}>{secilenKategori}</h3>
+    <SearchBar/>
+      
       <div className='card-list'>
       {
         yemekler.map(yemek=>

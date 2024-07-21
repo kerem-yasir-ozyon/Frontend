@@ -1,10 +1,15 @@
 import React, { useContext } from 'react'
 import '../assets/style/card.scss'
 import DataContext from '../context/DataContext'
+import { FaRegTrashCan } from "react-icons/fa6";
+import { FaRegEdit } from "react-icons/fa";
 
 const Card = ({yemek}) => {
-  const {yemekSil,yemekDuzenle} = useContext(DataContext);
+  const {yemekSil,yemekDuzenle,search} = useContext(DataContext);
   return (
+    (yemek.title.toLowerCase().startsWith(search.toLowerCase())||
+    yemek.description.toLowerCase().startsWith(search.toLowerCase())
+    )&&
     <div className='mainCard'>
       <div className='card'>
         <div className="img">
@@ -19,8 +24,9 @@ const Card = ({yemek}) => {
           <p>{yemek.description}</p>
         </div>
         <div className="btns">
-        <button onClick={()=>yemekDuzenle(yemek.id)} className='edit'>Güncelle</button>
-        <button onClick={()=>yemekSil(yemek.id)} className='delete'>SİL</button>
+        <button onClick={()=>yemekDuzenle(yemek.id)} className='edit'><FaRegEdit size={20} /></button>
+        <button onClick={()=>yemekSil(yemek.id)} className='delete'><FaRegTrashCan size={20} />
+        </button>
         </div>
         
       </div>
