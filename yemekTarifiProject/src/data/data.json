@@ -2,7 +2,7 @@
   "yemekler": [
     {
       "id": "1",
-      "title": "Spaghetti Carbonara",
+      "title": "Spaghetti Carbonaraaa",
       "category": "Italian Food",
       "description": "A classic Italian pasta dish with a creamy egg sauce.",
       "image": "https://localibyromeos.com.au/cdn/shop/products/SPAGHETTICARBONARA_300x300.jpg?v=1626624387"
@@ -68,21 +68,23 @@
       "title": "Pumpkin Soup",
       "category": "Italian Food",
       "description": "A creamy, seasonal soup made with pureed pumpkin and a blend of warm spices.",
-      "image": "https://adventuresincooking.com/wp-content/uploads/2010/10/Pumpkin-Soup-by-Eva-Kosmas-Flores-300x300.jpg"
+      "image": "https://adventuresincooking.com/wp-content/uploads/2010/10/Pumpkin-Soup-by-Eva-Kosmas-Flores-300x300.jpg",
+      "isDeleted": true
     },
     {
       "id": "11",
       "title": "tttttt",
       "category": "Turkish Food",
       "description": "ggggggg",
-      "image": "https://images.deliveryhero.io/image/fd-tr/LH/aahr-hero.jpg?width=300&height=300&quality=45"
+      "image": "https://images.deliveryhero.io/image/fd-tr/LH/aahr-hero.jpg?width=300&height=300&quality=45",
+      "isDeleted": true
     },
     {
       "id": "12",
-      "title": "keremmm",
+      "title": "Hamburger",
       "category": "Turkish Food",
-      "description": "ker",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxZPFHw8-InnU2E7MfVeKKwP8LyInWatx03Q&s"
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, debitis iusto veritatis ducimus quia pariatur omnis labore. Velit perspiciatis magnam eveniet accusantium facere.",
+      "image": "https://cdn.getiryemek.com/cuisines/1713898221252_1024x1024.jpeg"
     }
   ],
   "kategoriler": [

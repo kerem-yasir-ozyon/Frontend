@@ -3,6 +3,7 @@ import '../assets/style/card.scss'
 import DataContext from '../context/DataContext'
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FaRegEdit } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Card = ({yemek}) => {
   const {yemekSil,yemekDuzenle,search} = useContext(DataContext);
@@ -24,7 +25,8 @@ const Card = ({yemek}) => {
           <p>{yemek.description}</p>
         </div>
         <div className="btns">
-        <button onClick={()=>yemekDuzenle(yemek.id)} className='edit'><FaRegEdit size={20} /></button>
+        <Link to="/form" onClick={()=>yemekDuzenle(yemek.id)} className='edit'><FaRegEdit size={20} /></Link>
+        <Link to={yemek.id} key={yemek.id} onClick={()=>yemekDuzenle(yemek.id)} className='detay'>Detay</Link>
         <button onClick={()=>yemekSil(yemek.id)} className='delete'><FaRegTrashCan size={20} />
         </button>
         </div>

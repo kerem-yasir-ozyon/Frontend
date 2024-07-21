@@ -28,7 +28,6 @@ const Form = () => {
           <option>Turkish Food</option>
         </select>
       </div>
-      
       <div className="input">
         <input value={description} onChange={e=>setDescription(e.target.value)} type="text" placeholder='Recipe Description' />
       </div>

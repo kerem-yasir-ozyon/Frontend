@@ -37,14 +37,12 @@ export const DataProvider = ({children})=>{
         setsecilenYemek("");
       }
       
+      
     }
   
     const yemekSil = async (id) =>{
-      // frontende silme işlemi
       setYemekler(prev=>prev.filter(statedenGelen=>statedenGelen.id !== id));
-      //backendde silme işlemi
       const url = `http://localhost:3007/yemekler/${id}`
-      // const response = await axios.delete(url); tehlikeli veriyi kullanıcının veriyi databasedende silmessini saglar
       const response = await axios.patch(url,{isDeleted: true});
     }
   
